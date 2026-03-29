@@ -3,7 +3,7 @@
 Draw in the air using only your hands. Built with Python, MediaPipe, and OpenCV.
 
 ## Demo
-[Add a GIF or video here]
+[demo.mov](demo.mov)
 
 ## How It Works
 - **Right hand, index finger up** → draws on screen
