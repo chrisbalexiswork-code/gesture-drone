@@ -99,13 +99,13 @@ def get_gesture(hand_landmarks, handedness):
 
 def gesture_to_target(gesture, current_target):
     if gesture == "Pointing_Up":
-        return min(current_target + 0.1, 5.0)   # ascend
+        return min(current_target + 0.1, 5.0)    # ascend
     elif gesture == "Fist":
-        return 0.0                                # land
+        return max(current_target - 0.1, 0.0)    # gradual land
     elif gesture == "Peace":
-        return min(current_target + 0.05, 5.0)   # slow climb
+        return current_target                     # hold altitude, forward only
     elif gesture == "Open_Palm":
-        return current_target                     # hold
+        return current_target                     # hover
     return current_target
 
 # --- Main ---
